@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 
 export default function Ticket({user}) {
+    if (!user) return <p className="text-center text-red-500">No ticket data found.</p>;
   return (
     <div className='flex flex-col items-center h-screen w-5xl  z-20 p-3'>
       <Image src="/logo-full.svg" alt="Picture of the author" width={100} height={100} className='h-10 w-auto my-8' />
